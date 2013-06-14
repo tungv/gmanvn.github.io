@@ -101,7 +101,7 @@ var tungv = {
     {
       "name": "eClick",
       "employer": "FPT Online",
-      "from" : "May 2011",
+      "from" : "May 2012",
       "to" : "present",
       "description" : "eClick &ndash; Advertising network",
       "link" : "http://eclick.vn",
@@ -110,8 +110,8 @@ var tungv = {
     },{
       "name": "scorecard",
       "employer": "Agency Revolution",
-      "from" : "April 2012",
-      "to" : "June 2012",
+      "from" : "April 2013",
+      "to" : "June 2013",
       "description" : "Scorecard.io &ndash; Medical Insurance Websites analyzer",
       "link" : "http://scorecard.io",
       "roles" : ["Frontend"],
@@ -119,8 +119,8 @@ var tungv = {
     },{
       "name": "iMath",
       "employer": "RealCom Ltd",
-      "from" : "August 2011",
-      "to" : "October 2011",
+      "from" : "Aug 2011",
+      "to" : "Oct 2011",
       "description" : "iMath &ndash; Mathematical and 2D Geometrical applications",
       "link" : "",
       "roles" : ["Project Leader","Lead Dev"],

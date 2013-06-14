@@ -1,0 +1,255 @@
+@import url(http://weloveiconfonts.com/api/?family=entypo);
+
+/* http://meyerweb.com/eric/tools/css/reset/
+   v2.0 | 20110126
+   License: none (public domain)
+*/
+
+html, body, div, span, applet, object, iframe,
+h1, h2, h3, h4, h5, h6, p, blockquote, pre,
+a, abbr, acronym, address, big, cite, code,
+del, dfn, em, img, ins, kbd, q, s, samp,
+small, strike, strong, sub, sup, tt, var,
+b, u, i, center,
+dl, dt, dd, ol, ul, li,
+fieldset, form, label, legend,
+table, caption, tbody, tfoot, thead, tr, th, td,
+article, aside, canvas, details, embed,
+figure, figcaption, footer, header, hgroup,
+menu, nav, output, ruby, section, summary,
+time, mark, audio, video {
+    margin: 0;
+    padding: 0;
+    border: 0;
+    font-size: 100%;
+    font-family: 'Open Sans', 'Segoe UI', inherit;
+    vertical-align: baseline;
+}
+/* HTML5 display-role reset for older browsers */
+article, aside, details, figcaption, figure,
+footer, header, hgroup, menu, nav, section {
+    display: block;
+}
+body {
+    line-height: 1;
+}
+ol, ul {
+    list-style: none;
+}
+blockquote, q {
+    quotes: none;
+}
+blockquote:before, blockquote:after,
+q:before, q:after {
+    content: '';
+    content: none;
+}
+table {
+    border-collapse: collapse;
+    border-spacing: 0;
+}
+
+
+/* fontawesome */
+[class*="entypo-"]:before {
+    font-family: 'entypo', sans-serif;
+}
+
+
+
+header {
+    font-size: 36px;
+    margin: 12px;
+}
+
+h1 {
+    font-weight: 700;
+    font-size: 48px;
+}
+
+section {
+    padding: 12px;
+    margin: 12px;
+}
+
+section h2 {
+    font-weight: 700;
+    font-size: 30px;
+}
+
+
+.skill-level:after {
+    line-height: 18px;
+    -webkit-transition: color,font-size 200ms,100ms linear;
+}
+
+.star-5:after {
+    content: '\2605\2605\2605\2605\2605';
+    display: block;
+}
+
+.star-4:after {
+    content: '\2605\2605\2605\2605';
+    display: block;
+}
+
+.star-3:after {
+    content: '\2605\2605\2605';
+    display: block;
+}
+
+.star-2:after {
+    content: '\2605\2605';
+    display: block;
+}
+
+
+ul, li {
+    list-style: none;
+    padding: 0;
+    margin: 0;
+}
+
+#technical-skills li.skill-item {
+    float: left;
+    display: block;
+    width: 120px;
+    padding: 6px 12px;
+    margin: 6px;
+    background: #369;
+}
+
+#technical-skills li.skill-item .skill-name {
+    font-size: 18px;
+    font-weight: 700;
+    color: white;
+    line-height: 24px;
+}
+
+#technical-skills li.skill-item .skill-since {
+    display: block;
+}
+
+#technical-skills li.skill-item .skill-since:before {
+    content: 'since ';
+    font-size: 11pt;
+}
+
+#technical-skills li.skill-item:hover {
+    cursor: pointer;
+}
+
+#technical-skills li.skill-item:hover .skill-level:after {
+    font-size: 24px;
+    line-height: 18px;
+    color:gold;
+}
+
+
+#projects li.project {
+    float: left;
+    width: 240px;
+    background: #bd1b1b;
+    padding: 0 0 12px 0;
+    margin: 6px;
+}
+
+#projects li.project > span{
+    display: block;
+    margin: 0 12px;
+    padding-top:12px;
+    color: white;
+}
+
+#projects li.project span.project-employer {
+    line-height: 24px;
+    background: #7c1111;
+    font-weight: 700;
+    padding: 12px;
+    margin: 0;
+    text-align: center;
+    font-size: 24px;
+}
+
+#projects li.project span.project-link a {
+    color: white;
+    width: 100%;
+    display: block;
+    text-align: left;
+}
+
+#projects li.project span.project-timeline {
+    line-height: 18px;
+    background: #4b1010;
+    padding: 6px;
+    margin: 0;
+    text-align: center;
+    font-size:18px;
+}
+
+#projects li.project span.project-description {
+    font-weight: 700;
+}
+
+#projects li.project hr {
+    border: 1px dashed white;
+    opacity: .3;
+}
+
+#projects li.project span.project-role span,
+#projects li.project span.project-technology span {
+    line-height: 18px;
+    display: inline-block;
+    padding: 2px 6px;
+    background: #7c1111;
+    margin: 2px;
+    cursor: pointer;
+}
+
+
+#schools {
+    width: 1008px;
+}
+#schools tr {
+    border-top: 1px dashed black;
+}
+
+#schools tr:first-child {
+    border-top: none;
+}
+
+#schools td {
+    padding: 12px;
+    vertical-align: middle;
+}
+
+#schools td.school-name strong {
+    display: block;
+}
+
+/**
+ * For modern browsers
+ * 1. The space content is one way to avoid an Opera bug when the
+ *    contenteditable attribute is included anywhere else in the document.
+ *    Otherwise it causes space to appear at the top and bottom of elements
+ *    that are clearfixed.
+ * 2. The use of `table` rather than `block` is only necessary if using
+ *    `:before` to contain the top-margins of child elements.
+ */
+.clearfix:before,
+.clearfix:after {
+    content: " "; /* 1 */
+    display: table; /* 2 */
+}
+
+.clearfix:after {
+    clear: both;
+}
+
+/**
+ * For IE 6/7 only
+ * Include this rule to trigger hasLayout and contain floats.
+ */
+.clearfix {
+    *zoom: 1;
+}

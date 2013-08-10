@@ -63,6 +63,10 @@ header section h2 {
     padding: 0;
 }
 
+.box {
+    margin: 6px !important;
+}
+
 #about-me .hero {
     float: left;
 }
@@ -124,7 +128,6 @@ ul, li {
     display: block;
     width: 120px;
     padding: 6px 12px;
-    margin: 6px;
     background: #369;
 }
 
@@ -160,7 +163,6 @@ ul, li {
     width: 230px;
     background: #bd1b1b;
     padding: 0 0 12px 0;
-    margin: 4px;
 }
 
 #projects li.project:first-child {
@@ -265,4 +267,13 @@ ul, li {
  */
 .clearfix {
     *zoom: 1;
+}
+
+
+@media only screen
+and (min-device-width : 768px)
+and (max-device-width : 1024px) {
+    .box {
+        margin: 6px 4px !important;
+    }
 }

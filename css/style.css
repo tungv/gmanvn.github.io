@@ -275,9 +275,13 @@ ul, li {
 @media only screen
 and (max-device-width : 1024px) {
     .box {
-        margin: 6px 4px !important;
+        margin: 4px 4px !important;
     }
 
     .desktop {display: none !important;}
     .tablet {display: block !important;}
+
+    .project-employer {
+        font-size:20px;
+    }
 }

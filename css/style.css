@@ -57,9 +57,18 @@ table {
 
 
 
-header {
+header section h2 {
     font-size: 36px;
-    margin: 12px;
+    font-weight: 500;
+    padding: 0;
+}
+
+#about-me .hero {
+    float: left;
+}
+
+#about-me #contact {
+    float:left;
 }
 
 h1 {
@@ -148,10 +157,14 @@ ul, li {
 
 #projects li.project {
     float: left;
-    width: 240px;
+    width: 230px;
     background: #bd1b1b;
     padding: 0 0 12px 0;
-    margin: 6px;
+    margin: 4px;
+}
+
+#projects li.project:first-child {
+    margin-left:0;
 }
 
 #projects li.project > span{

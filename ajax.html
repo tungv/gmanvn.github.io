@@ -1,0 +1,101 @@
+<!DOCTYPE html>
+<html ng-app="tungv">
+<head>
+    <meta charset="utf-8">
+    <title>Vu Viet Tung - JavaScript Specialist</title>
+    <link rel="stylesheet" href="css/style.css"/>
+    <link href='http://fonts.googleapis.com/css?family=Open+Sans' rel='stylesheet' type='text/css'>
+    <script type="text/javascript" src="js/lodash.min.js"></script>
+    <script type="text/javascript" src="https://ajax.googleapis.com/ajax/libs/angularjs/1.1.5/angular.js"></script>
+    <script type="text/javascript" src="js/script.js"></script>
+</head>
+<body ng-controller="mainCtrl">
+<header>
+    <section id="about-me" class="clearfix">
+        <div class="hero">
+            <h1 itemprop="name">Vu Viet Tung</h1>
+            <h2>JavaScript Specialist</h2>
+        </div>
+
+        <div id="contact">
+            <a itemprop="email" href="mailTo:me@tungv.com">me@tungv.com</a>
+            <a itemprop="telephone" href="tel:+841214566181">(+84) 121-456-6181</a>
+
+        </div>
+    </section>
+</header>
+
+<div id="main">
+    <section id="skills">
+        <h2>Skills</h2>
+        <h3>Technical Skills</h3>
+        <ul id="technical-skills" class="clearfix">
+            <li ng-repeat="category in skills">
+                <ul class="clearfix">
+                    <li class="skill-item skill-group-{{skill.category}}" ng-repeat="skill in category">
+                        <span class="skill-name">{{ skill.name }}</span>
+                        <span class="skill-since">{{ skill.since }}</span>
+                        <span class="skill-level star-{{skill.level}}"></span>
+                    </li>
+                </ul>
+            </li>
+        </ul>
+    </section>
+
+    <section id="experience">
+        <h2>Experience</h2>
+        <h3>Past Projects</h3>
+        <ul id="projects" class="clearfix">
+            <li class="project" ng-repeat="project in projects"  itemscope itemtype="http://schema.org/JobPosting">
+                <span class="project-employer" itemprop="hiringOrganization">{{ project.employer }}</span>
+                    <span class="project-timeline">
+                        <time datetime="{{ project.from }}">{{ project.from }}</time>
+                        &mdash;
+                        <time datetime="{{ project.to }}">{{ project.to }}</time>
+                    </span>
+                <span class="project-description" ng-bind-html-unsafe="project.description"></span>
+                    <span class="project-link" ng-show="{{project.link !== ''}}">
+                        <a target="_blank" href="{{project.link}}">{{project.link}}</a>
+                    </span>
+                    <span class="project-role" itemprop="responsibilities">
+                        <span ng-repeat="role in project.roles">
+                            <b class="entypo-user"></b> {{role}}
+                        </span>
+                    </span>
+                <hr>
+                    <span class="project-technology" itemprop="skills">
+                        <span ng-repeat="tech in project.tech">
+                            <b class="entypo-tools"></b> {{tech}}
+                        </span>
+                    </span>
+            </li>
+        </ul>
+    </section>
+
+    <section id="education">
+        <h2>Education</h2>
+        <h3>Schools &amp; Institutes</h3>
+        <table id="schools">
+            <tbody>
+            <tr ng-repeat="school in schools" itemscope itemtype="http://schema.org/EducationalOrganization">
+                <td class="school-name">
+                    <strong itemprop="name">{{ school.name }}</strong>
+                    <em>{{ school.from }} &mdash; {{ school.to }}</em>
+                </td>
+                <td class="school-degree">
+                    {{ school.degree }}
+                </td>
+                <td class="school-highlight">
+                    <ul>
+                        <li ng-repeat="highlight in school.highlights">
+                            {{ highlight }}
+                        </li>
+                    </ul>
+                </td>
+            </tr>
+            </tbody>
+        </table>
+    </section>
+</div>
+</body>
+</html>

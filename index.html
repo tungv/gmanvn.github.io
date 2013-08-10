@@ -1,87 +1,364 @@
 <!DOCTYPE html>
-<html ng-app="tungv">
+<html class="ng-scope">
 <head>
     <meta charset="utf-8">
     <title>Vu Viet Tung - JavaScript Specialist</title>
-    <link rel="stylesheet" href="css/style.css"/>
-    <link href='http://fonts.googleapis.com/css?family=Open+Sans' rel='stylesheet' type='text/css'>
+    <link rel="stylesheet" href="css/style.css">
+    <link href="http://fonts.googleapis.com/css?family=Open+Sans" rel="stylesheet" type="text/css">
     <script type="text/javascript" src="js/lodash.min.js"></script>
-    <script type="text/javascript" src="https://ajax.googleapis.com/ajax/libs/angularjs/1.1.5/angular.js"></script>
-    <script type="text/javascript" src="js/script.js"></script>
+    <!--<script type="text/javascript" src="https://ajax.googleapis.com/ajax/libs/angularjs/1.1.5/angular.js"></script><style type="text/css">@charset "UTF-8";[ng\:cloak],[ng-cloak],[data-ng-cloak],[x-ng-cloak],.ng-cloak,.x-ng-cloak{display:none;}ng\:form{display:block;}</style>-->
+    <!--<script type="text/javascript" src="js/script.js"></script>-->
 </head>
-<body ng-controller="mainCtrl">
-    <header>
-        <h1>Vu Viet Tung - me@tungv.com</h1>
-        <span>JavaScript Specialist</span>
-    </header>
+<body ng-controller="mainCtrl" class="ng-scope">
+<header>
+    <section id="about-me" class="clearfix">
+        <div class="hero">
+            <h1 itemprop="name">Vu Viet Tung</h1>
 
-    <div id="main">
-        <section id="skills">
-            <h2>Skills</h2>
-            <h3>Technical Skills</h3>
-            <ul id="technical-skills" class="clearfix">
-                <li ng-repeat="category in skills">
-                    <ul class="clearfix">
-                        <li class="skill-item skill-group-{{skill.category}}" ng-repeat="skill in category">
-                            <span class="skill-name">{{ skill.name }}</span>
-                            <span class="skill-since">{{ skill.since }}</span>
-                            <span class="skill-level star-{{skill.level}}"></span>
-                        </li>
-                    </ul>
+            <h2>JavaScript Specialist</h2>
+        </div>
+
+        <div id="contact">
+            <a itemprop="email" href="mailTo:me@tungv.com">me@tungv.com</a>
+            <a itemprop="telephone" href="tel:+841214566181">(+84) 121-456-6181</a>
+
+        </div>
+    </section>
+</header>
+
+<div id="main">
+<section id="skills">
+    <h2>Skills</h2>
+
+    <h3>Technical Skills</h3>
+    <ul id="technical-skills" class="clearfix">
+        <!-- ngRepeat: category in skills -->
+        <li ng-repeat="category in skills" class="ng-scope">
+            <ul class="clearfix">
+                <!-- ngRepeat: skill in category -->
+                <li class="skill-item skill-group-js" ng-repeat="skill in category">
+                    <span class="skill-name ng-binding">JavaScript</span>
+                    <span class="skill-since ng-binding">2007</span>
+                    <span class="skill-level star-5"></span>
+                </li>
+                <li class="skill-item skill-group-js" ng-repeat="skill in category">
+                    <span class="skill-name ng-binding">jQuery</span>
+                    <span class="skill-since ng-binding">2008</span>
+                    <span class="skill-level star-5"></span>
+                </li>
+                <li class="skill-item skill-group-js" ng-repeat="skill in category">
+                    <span class="skill-name ng-binding">Angular.JS</span>
+                    <span class="skill-since ng-binding">2012</span>
+                    <span class="skill-level star-4"></span>
+                </li>
+                <li class="skill-item skill-group-js" ng-repeat="skill in category">
+                    <span class="skill-name ng-binding">Knockout.JS</span>
+                    <span class="skill-since ng-binding">2012</span>
+                    <span class="skill-level star-4"></span>
                 </li>
             </ul>
-        </section>
-
-        <section id="experience">
-            <h2>Experience</h2>
-            <h3>Past Projects</h3>
-            <ul id="projects" class="clearfix">
-                <li class="project" ng-repeat="project in projects">
-                    <span class="project-employer">{{ project.employer }}</span>
-                    <span class="project-timeline">{{ project.from }} &mdash; {{ project.to }}</span>
-                    <span class="project-description" ng-bind-html-unsafe="project.description"></span>
-                    <span class="project-link" ng-show="{{project.link !== ''}}">
-                        <a href="{{project.link}}">{{project.link}}</a>
-                    </span>
-                    <span class="project-role">
-                        <span ng-repeat="role in project.roles">
-                            <b class="entypo-user"></b> {{role}}
-                        </span>
-                    </span>
-                    <hr>
-                    <span class="project-technology">
-                        <span ng-repeat="tech in project.tech">
-                            <b class="entypo-tools"></b> {{tech}}
-                        </span>
-                    </span>
+        </li>
+        <li ng-repeat="category in skills" class="ng-scope">
+            <ul class="clearfix">
+                <!-- ngRepeat: skill in category -->
+                <li class="skill-item skill-group-server-js" ng-repeat="skill in category">
+                    <span class="skill-name ng-binding">Node.JS</span>
+                    <span class="skill-since ng-binding">2012</span>
+                    <span class="skill-level star-5"></span>
+                </li>
+                <li class="skill-item skill-group-server-js" ng-repeat="skill in category">
+                    <span class="skill-name ng-binding">Express.JS</span>
+                    <span class="skill-since ng-binding">2012</span>
+                    <span class="skill-level star-4"></span>
+                </li>
+                <li class="skill-item skill-group-server-js" ng-repeat="skill in category">
+                    <span class="skill-name ng-binding">Socket.IO</span>
+                    <span class="skill-since ng-binding">2012</span>
+                    <span class="skill-level star-3"></span>
                 </li>
             </ul>
-        </section>
+        </li>
+        <li ng-repeat="category in skills" class="ng-scope">
+            <ul class="clearfix">
+                <!-- ngRepeat: skill in category -->
+                <li class="skill-item skill-group-web" ng-repeat="skill in category">
+                    <span class="skill-name ng-binding">HTML5</span>
+                    <span class="skill-since ng-binding">20011</span>
+                    <span class="skill-level star-4"></span>
+                </li>
+                <li class="skill-item skill-group-web" ng-repeat="skill in category">
+                    <span class="skill-name ng-binding">CSS</span>
+                    <span class="skill-since ng-binding">2008</span>
+                    <span class="skill-level star-4"></span>
+                </li>
+                <li class="skill-item skill-group-web" ng-repeat="skill in category">
+                    <span class="skill-name ng-binding">Less</span>
+                    <span class="skill-since ng-binding">2012</span>
+                    <span class="skill-level star-4"></span>
+                </li>
+            </ul>
+        </li>
+        <li ng-repeat="category in skills" class="ng-scope">
+            <ul class="clearfix">
+                <!-- ngRepeat: skill in category -->
+                <li class="skill-item skill-group-storage" ng-repeat="skill in category">
+                    <span class="skill-name ng-binding">MySQL</span>
+                    <span class="skill-since ng-binding">2010</span>
+                    <span class="skill-level star-4"></span>
+                </li>
+                <li class="skill-item skill-group-storage" ng-repeat="skill in category">
+                    <span class="skill-name ng-binding">SQL Server</span>
+                    <span class="skill-since ng-binding">2008</span>
+                    <span class="skill-level star-3"></span>
+                </li>
+                <li class="skill-item skill-group-storage" ng-repeat="skill in category">
+                    <span class="skill-name ng-binding">MongoDB</span>
+                    <span class="skill-since ng-binding">2012</span>
+                    <span class="skill-level star-4"></span>
+                </li>
+                <li class="skill-item skill-group-storage" ng-repeat="skill in category">
+                    <span class="skill-name ng-binding">Redis</span>
+                    <span class="skill-since ng-binding">2012</span>
+                    <span class="skill-level star-4"></span>
+                </li>
+            </ul>
+        </li>
+        <li ng-repeat="category in skills" class="ng-scope">
+            <ul class="clearfix">
+                <!-- ngRepeat: skill in category -->
+                <li class="skill-item skill-group-general" ng-repeat="skill in category">
+                    <span class="skill-name ng-binding">.Net</span>
+                    <span class="skill-since ng-binding">2008</span>
+                    <span class="skill-level star-4"></span>
+                </li>
+                <li class="skill-item skill-group-general" ng-repeat="skill in category">
+                    <span class="skill-name ng-binding">Java</span>
+                    <span class="skill-since ng-binding">2008</span>
+                    <span class="skill-level star-3"></span>
+                </li>
+            </ul>
+        </li>
+    </ul>
+</section>
 
-        <section id="education">
-            <h2>Education</h2>
-            <h3>Schools &amp; Institutes</h3>
-            <table id="schools">
-                <tbody>
-                <tr ng-repeat="school in schools">
-                    <td class="school-name">
-                        <strong>{{ school.name }}</strong>
-                        <em>{{ school.from }} &mdash; {{ school.to }}</em>
-                    </td>
-                    <td class="school-degree">
-                        {{ school.degree }}
-                    </td>
-                    <td class="school-highlight">
-                        <ul>
-                            <li ng-repeat="highlight in school.highlights">
-                                {{ highlight }}
-                            </li>
-                        </ul>
-                    </td>
-                </tr>
-                </tbody>
-            </table>
-        </section>
-    </div>
+<section id="experience">
+    <h2>Experience</h2>
+
+    <h3>Past Projects</h3>
+    <ul id="projects" class="clearfix">
+        <!-- ngRepeat: project in projects -->
+        <li class="project ng-scope" ng-repeat="project in projects" itemscope=""
+            itemtype="http://schema.org/JobPosting">
+            <span class="project-employer ng-binding" itemprop="hiringOrganization">FPT Online</span>
+                    <span class="project-timeline">
+                        <time datetime="May 2012" class="ng-binding">May 2012</time>
+                        —
+                        <time datetime="present" class="ng-binding">present</time>
+                    </span>
+            <span class="project-description ng-binding" ng-bind-html-unsafe="project.description">eClick – Advertising network</span>
+                    <span class="project-link" ng-show="true">
+                        <a target="_blank" href="http://eclick.vn" class="ng-binding">http://eclick.vn</a>
+                    </span>
+                    <span class="project-role" itemprop="responsibilities">
+                        <!-- ngRepeat: role in project.roles --><span ng-repeat="role in project.roles"
+                                                                      class="ng-scope ng-binding">
+                            <b class="entypo-user"></b> Backend
+                        </span><span ng-repeat="role in project.roles" class="ng-scope ng-binding">
+                            <b class="entypo-user"></b> Frontend
+                        </span><span ng-repeat="role in project.roles" class="ng-scope ng-binding">
+                            <b class="entypo-user"></b> Business Analyst
+                        </span>
+                    </span>
+            <hr>
+                    <span class="project-technology" itemprop="skills">
+                        <!-- ngRepeat: tech in project.tech --><span ng-repeat="tech in project.tech"
+                                                                     class="ng-scope ng-binding">
+                            <b class="entypo-tools"></b> NodeJS
+                        </span><span ng-repeat="tech in project.tech" class="ng-scope ng-binding">
+                            <b class="entypo-tools"></b> ExpressJS
+                        </span><span ng-repeat="tech in project.tech" class="ng-scope ng-binding">
+                            <b class="entypo-tools"></b> KnockoutJS
+                        </span><span ng-repeat="tech in project.tech" class="ng-scope ng-binding">
+                            <b class="entypo-tools"></b> AngularJS
+                        </span><span ng-repeat="tech in project.tech" class="ng-scope ng-binding">
+                            <b class="entypo-tools"></b> Vanilla JavaScript
+                        </span><span ng-repeat="tech in project.tech" class="ng-scope ng-binding">
+                            <b class="entypo-tools"></b> Redis
+                        </span><span ng-repeat="tech in project.tech" class="ng-scope ng-binding">
+                            <b class="entypo-tools"></b> MySQL
+                        </span>
+                    </span>
+        </li>
+        <li class="project ng-scope" ng-repeat="project in projects" itemscope=""
+            itemtype="http://schema.org/JobPosting">
+            <span class="project-employer ng-binding" itemprop="hiringOrganization">Agency Revolution</span>
+                    <span class="project-timeline">
+                        <time datetime="April 2013" class="ng-binding">April 2013</time>
+                        —
+                        <time datetime="June 2013" class="ng-binding">June 2013</time>
+                    </span>
+            <span class="project-description ng-binding" ng-bind-html-unsafe="project.description">Scorecard.io – Medical Insurance Websites analyzer</span>
+                    <span class="project-link" ng-show="true">
+                        <a target="_blank" href="http://scorecard.io" class="ng-binding">http://scorecard.io</a>
+                    </span>
+                    <span class="project-role" itemprop="responsibilities">
+                        <!-- ngRepeat: role in project.roles --><span ng-repeat="role in project.roles"
+                                                                      class="ng-scope ng-binding">
+                            <b class="entypo-user"></b> Frontend
+                        </span>
+                    </span>
+            <hr>
+                    <span class="project-technology" itemprop="skills">
+                        <!-- ngRepeat: tech in project.tech --><span ng-repeat="tech in project.tech"
+                                                                     class="ng-scope ng-binding">
+                            <b class="entypo-tools"></b> AngularJS
+                        </span>
+                    </span>
+        </li>
+        <li class="project ng-scope" ng-repeat="project in projects" itemscope=""
+            itemtype="http://schema.org/JobPosting">
+            <span class="project-employer ng-binding" itemprop="hiringOrganization">RealCom Ltd</span>
+                    <span class="project-timeline">
+                        <time datetime="Aug 2011" class="ng-binding">Aug 2011</time>
+                        —
+                        <time datetime="Oct 2011" class="ng-binding">Oct 2011</time>
+                    </span>
+            <span class="project-description ng-binding" ng-bind-html-unsafe="project.description">iMath – Mathematical and 2D Geometrical applications</span>
+                    <span class="project-link" ng-show="false" style="display: none;">
+                        <a target="_blank" href="" class="ng-binding"></a>
+                    </span>
+                    <span class="project-role" itemprop="responsibilities">
+                        <!-- ngRepeat: role in project.roles --><span ng-repeat="role in project.roles"
+                                                                      class="ng-scope ng-binding">
+                            <b class="entypo-user"></b> Project Leader
+                        </span><span ng-repeat="role in project.roles" class="ng-scope ng-binding">
+                            <b class="entypo-user"></b> Lead Dev
+                        </span>
+                    </span>
+            <hr>
+                    <span class="project-technology" itemprop="skills">
+                        <!-- ngRepeat: tech in project.tech --><span ng-repeat="tech in project.tech"
+                                                                     class="ng-scope ng-binding">
+                            <b class="entypo-tools"></b> WPF
+                        </span><span ng-repeat="tech in project.tech" class="ng-scope ng-binding">
+                            <b class="entypo-tools"></b> XML
+                        </span><span ng-repeat="tech in project.tech" class="ng-scope ng-binding">
+                            <b class="entypo-tools"></b> .Net Framework 3.5
+                        </span>
+                    </span>
+        </li>
+        <li class="project ng-scope" ng-repeat="project in projects" itemscope=""
+            itemtype="http://schema.org/JobPosting">
+            <span class="project-employer ng-binding" itemprop="hiringOrganization">FPT Software</span>
+                    <span class="project-timeline">
+                        <time datetime="October 2010" class="ng-binding">October 2010</time>
+                        —
+                        <time datetime="April 2011" class="ng-binding">April 2011</time>
+                    </span>
+            <span class="project-description ng-binding" ng-bind-html-unsafe="project.description">vivuvivu – Entertainment and Security related services</span>
+                    <span class="project-link" ng-show="true">
+                        <a target="_blank" href="http://fds.vivuvivu.com" class="ng-binding">http://fds.vivuvivu.com</a>
+                    </span>
+                    <span class="project-role" itemprop="responsibilities">
+                        <!-- ngRepeat: role in project.roles --><span ng-repeat="role in project.roles"
+                                                                      class="ng-scope ng-binding">
+                            <b class="entypo-user"></b> Backend
+                        </span><span ng-repeat="role in project.roles" class="ng-scope ng-binding">
+                            <b class="entypo-user"></b> Frontend
+                        </span><span ng-repeat="role in project.roles" class="ng-scope ng-binding">
+                            <b class="entypo-user"></b> Business Analyst
+                        </span><span ng-repeat="role in project.roles" class="ng-scope ng-binding">
+                            <b class="entypo-user"></b> Database Design
+                        </span>
+                    </span>
+            <hr>
+                    <span class="project-technology" itemprop="skills">
+                        <!-- ngRepeat: tech in project.tech --><span ng-repeat="tech in project.tech"
+                                                                     class="ng-scope ng-binding">
+                            <b class="entypo-tools"></b> .Net Framework 3.5
+                        </span><span ng-repeat="tech in project.tech" class="ng-scope ng-binding">
+                            <b class="entypo-tools"></b> SQL Server 2005
+                        </span>
+                    </span>
+        </li>
+    </ul>
+</section>
+
+<section id="education">
+    <h2>Education</h2>
+
+    <h3>Schools &amp; Institutes</h3>
+    <table id="schools">
+        <tbody>
+        <!-- ngRepeat: school in schools -->
+        <tr ng-repeat="school in schools" itemscope="" itemtype="http://schema.org/EducationalOrganization"
+            class="ng-scope">
+            <td class="school-name">
+                <strong itemprop="name" class="ng-binding">FPT University</strong>
+                <em class="ng-binding">September 2008 — July 2012</em>
+            </td>
+            <td class="school-degree ng-binding">
+                Bachelor of Software Engineering
+            </td>
+            <td class="school-highlight">
+                <ul>
+                    <!-- ngRepeat: highlight in school.highlights -->
+                    <li ng-repeat="highlight in school.highlights" class="ng-scope ng-binding">
+                        All technical and business courses are in English
+                    </li>
+                    <li ng-repeat="highlight in school.highlights" class="ng-scope ng-binding">
+                        90% tuition scholarship
+                    </li>
+                    <li ng-repeat="highlight in school.highlights" class="ng-scope ng-binding">
+                        Graduated Second of the Batch 4A
+                    </li>
+                </ul>
+            </td>
+        </tr>
+        <tr ng-repeat="school in schools" itemscope="" itemtype="http://schema.org/EducationalOrganization"
+            class="ng-scope">
+            <td class="school-name">
+                <strong itemprop="name" class="ng-binding">FPT Aptech</strong>
+                <em class="ng-binding">May 2007 — May 2008</em>
+            </td>
+            <td class="school-degree ng-binding">
+                Information Systems Management
+            </td>
+            <td class="school-highlight">
+                <ul>
+                    <!-- ngRepeat: highlight in school.highlights -->
+                    <li ng-repeat="highlight in school.highlights" class="ng-scope ng-binding">
+                        Graduated: 8.7/10
+                    </li>
+                </ul>
+            </td>
+        </tr>
+        <tr ng-repeat="school in schools" itemscope="" itemtype="http://schema.org/EducationalOrganization"
+            class="ng-scope">
+            <td class="school-name">
+                <strong itemprop="name" class="ng-binding">Le Hong Phong</strong>
+                <em class="ng-binding">August 2005 — May 2008</em>
+            </td>
+            <td class="school-degree ng-binding">
+                High School
+            </td>
+            <td class="school-highlight">
+                <ul>
+                    <!-- ngRepeat: highlight in school.highlights -->
+                    <li ng-repeat="highlight in school.highlights" class="ng-scope ng-binding">
+                        High School for the Gifted
+                    </li>
+                    <li ng-repeat="highlight in school.highlights" class="ng-scope ng-binding">
+                        Good at Math and Physics
+                    </li>
+                </ul>
+            </td>
+        </tr>
+        </tbody>
+    </table>
+</section>
+</div>
+
+
 </body>
 </html>

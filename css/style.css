@@ -318,10 +318,11 @@ and (max-width : 480px) {
         box-sizing: border-box !important;
         display: block !important;
         width:100% !important;
+        margin: 6px 0 !important;
     }
 
     #technical-skills li.skill-item {
-        margin: 0 6px !important;
+        margin: 0 !important;
     }
 
     #technical-skills > li {
@@ -333,7 +334,16 @@ and (max-width : 480px) {
     }
 
     #technical-skills li.skill-item .skill-name {
-        width: 150px !important;
+        width: 110px !important;
+    }
+
+    #technical-skills li.skill-item .skill-since {
+        font-size: 12px !important;
+        color: #ddd !important;
+    }
+
+    #technical-skills li.skill-item .skill-since:before {
+        font-size: 12px !important;
     }
 
     #technical-skills li.skill-item .skill-level {

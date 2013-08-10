@@ -22,7 +22,7 @@ time, mark, audio, video {
     padding: 0;
     border: 0;
     font-size: 100%;
-    font-family: 'Open Sans', 'Segoe UI', inherit;
+    font-family: 'Segoe UI', 'Open Sans';
     vertical-align: baseline;
 }
 /* HTML5 display-role reset for older browsers */

@@ -130,7 +130,6 @@ ul, li {
     padding: 6px 12px;
     background: #369;
     box-sizing: border-box;
-    margin: 0 6px !important;
 }
 
 #technical-skills li.skill-item .skill-name {
@@ -303,6 +302,10 @@ and (max-device-width : 1024px) {
 @media only screen
 and (min-device-width : 320px)
 and (max-device-width : 480px) {
+    html {
+        max-width: 480px !important;
+    }
+
     /* Styles */
     .box {
         box-sizing: border-box !important;

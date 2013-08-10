@@ -129,6 +129,8 @@ ul, li {
     width: 120px;
     padding: 6px 12px;
     background: #369;
+    box-sizing: border-box;
+    margin: 0 6px !important;
 }
 
 #technical-skills li.skill-item .skill-name {
@@ -273,7 +275,8 @@ ul, li {
 .tablet {display: none !important;}
 
 @media only screen
-and (max-device-width : 1024px) {
+and (min-width : 768px)
+and (max-width : 1024px) {
     .box {
         margin: 4px 4px !important;
     }
@@ -294,4 +297,51 @@ and (max-device-width : 1024px) {
         line-height: 18px !important;
         color:gold !important;
     }
+}
+
+/* Smartphones (portrait and landscape) ----------- */
+@media only screen
+and (min-width : 320px)
+and (max-width : 480px) {
+    /* Styles */
+    .box {
+        box-sizing: border-box !important;
+        display: block !important;
+        width:100% !important;
+    }
+
+    #technical-skills li.skill-item {
+        margin: 0 6px !important;
+    }
+
+    #technical-skills > li {
+        margin: 6px !important;
+    }
+
+    #technical-skills li.skill-item > span {
+        display: inline-block !important;
+    }
+
+    #technical-skills li.skill-item .skill-name {
+        width: 150px !important;
+    }
+
+    #technical-skills li.skill-item .skill-level {
+        text-align: right !important;
+        float: right !important;
+    }
+    
+    #technical-skills li.skill-item .skill-level.star-5 {
+        font-size: 24px !important;
+        line-height: 18px !important;
+        color:gold !important;
+    }
+    #technical-skills li.skill-item .skill-level.star-4 {
+        font-size: 22px !important;
+        line-height: 18px !important;
+        color:silver !important;
+    }
+
+
+
 }

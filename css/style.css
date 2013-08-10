@@ -160,7 +160,7 @@ ul, li {
 
 #projects li.project {
     float: left;
-    width: 230px;
+    width: 235px;
     background: #bd1b1b;
     padding: 0 0 12px 0;
 }
@@ -270,10 +270,15 @@ ul, li {
 }
 
 
+.tablet {display: none !important;}
+
 @media only screen
 and (min-device-width : 768px)
 and (max-device-width : 1024px) {
     .box {
         margin: 6px 4px !important;
     }
+
+    .desktop {display: none !important;}
+    .tablet {display: block !important;}
 }

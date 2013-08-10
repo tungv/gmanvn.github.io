@@ -275,8 +275,8 @@ ul, li {
 .tablet {display: none !important;}
 
 @media only screen
-and (min-width : 768px)
-and (max-width : 1024px) {
+and (min-device-width : 768px)
+and (max-device-width : 1024px) {
     .box {
         margin: 4px 4px !important;
     }
@@ -301,8 +301,8 @@ and (max-width : 1024px) {
 
 /* Smartphones (portrait and landscape) ----------- */
 @media only screen
-and (min-width : 320px)
-and (max-width : 480px) {
+and (min-device-width : 320px)
+and (max-device-width : 480px) {
     /* Styles */
     .box {
         box-sizing: border-box !important;

@@ -223,7 +223,7 @@ ul, li {
 
 
 #schools {
-    width: 1008px;
+    width: 100%;
 }
 #schools tr {
     border-top: 1px dashed black;
@@ -287,5 +287,11 @@ and (max-device-width : 1024px) {
 
     .project-employer {
         font-size:20px !important;
+    }
+
+    #technical-skills li.skill-item .skill-level:after {
+        font-size: 24px !important;
+        line-height: 18px !important;
+        color:gold !important;
     }
 }

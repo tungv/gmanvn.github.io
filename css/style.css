@@ -338,13 +338,12 @@ and (max-width : 480px) {
     }
 
     #technical-skills li.skill-item .skill-since {
-        font-size: 12px !important;
-        color: #ddd !important;
+display: none !important;
     }
 
-    #technical-skills li.skill-item .skill-since:before {
-        font-size: 12px !important;
-    }
+    /*#technical-skills li.skill-item .skill-since:before {*/
+        /*font-size: 12px !important;*/
+    /*}*/
 
     #technical-skills li.skill-item .skill-level {
         text-align: right !important;
